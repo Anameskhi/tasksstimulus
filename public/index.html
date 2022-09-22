@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <script src="bundle.js" async></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="form-inline mx-auto mt-4 " style = "width:20%">
+  <div  data-controller="hello">
+    <input class="form-control" data-hello-target="name" type="text"><br>
+    <button class="btn btn-dark" data-action="click->hello#greet">Greet</button>
+  </div>
+
+  <div  data-controller="clipboard" data-clipboard-supported-class="clipboard--supported">
+    PIN: <textarea class="form-control" data-clipboard-target="source" readonly>3737</textarea><br>
+    <button class="btn btn-dark mb-2" data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
+  </div>
+
+  <div data-controller="slideshow" data-slideshow-index-value="0">
+    <button class="btn btn-secondary mb-2" data-action="slideshow#previous"> ← </button>
+    <button class="btn btn-secondary mb-2" data-action="slideshow#next"> → </button>
+  
+    <div style="font-size: 2em;" data-slideshow-target="slide">🐵</div>
+    <div style="font-size: 2em;" data-slideshow-target="slide">🙈</div>
+    <div style="font-size: 2em;" data-slideshow-target="slide">🙉</div>
+    <div style="font-size: 2em;" data-slideshow-target="slide">🙊</div>
+  </div>
+
+  <div data-controller="content-loader"
+     data-content-loader-url-value="/messages.html"
+     data-content-loader-refresh-interval-value="5000"></div>
+    
+    </div>
+    
+
+
+</div>
+</body>
+</html>
+
+
